@@ -16,6 +16,6 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install dependencies
-        run: python app/db.py
+      - name: print version
+        run: python -c "import sys; print(sys.version)"
       
