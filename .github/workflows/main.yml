@@ -13,6 +13,5 @@ jobs:
         exclude:
           - os: macos-latest
             python-version: "3.7"
-            run: py app/db.py
           - os: windows-latest
             python-version: "3.7"
