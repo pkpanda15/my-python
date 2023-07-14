@@ -13,9 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
+        uses: actions/my-python@v1.1
         with:
           python-version: ${{ matrix.python-version }}
       - name: print version
-        run: python -c "import sys; print(sys.version)"
+        run: python app/db.py
       
