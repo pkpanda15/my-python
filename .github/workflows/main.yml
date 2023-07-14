@@ -1,0 +1,18 @@
+name: Python package
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [self-hosted, Linux, python]
+        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11", pypy2.7, pypy3.9]
+        exclude:
+          - os: macos-latest
+            python-version: "3.7"
+            run: py app/db.py
+          - os: windows-latest
+            python-version: "3.7"
